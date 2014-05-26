@@ -1,0 +1,17 @@
+xm <- c(0,0,-sin(pi/6),cos(pi/6))
+erus <- quaternion(apply(as.matrix(xm),1,rep,6))
+merus <- as(erus,'rotmatrix')
+merus <- as(merus^seq(1:6),'rotmatrix')
+qscatter(merus)
+
+xm <- c(0,-sin(pi/6),0,cos(pi/6))
+erus <- quaternion(apply(as.matrix(xm),1,rep,6))
+merus <- as(erus,'rotmatrix')
+merus <- as(merus^seq(1:6),'rotmatrix')
+qscatter(merus)
+
+xm <- c(-sin(pi/6),0,0,cos(pi/6))
+erus <- quaternion(apply(as.matrix(xm),1,rep,6))
+merus <- as(erus,'rotmatrix')
+merus <- as(merus^seq(1:6),'rotmatrix')
+qscatter(merus)
